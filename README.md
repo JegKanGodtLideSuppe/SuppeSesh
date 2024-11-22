@@ -1,2 +1,2 @@
 # SuppeSesh
- den ondeste suppe sesh i solsystemet
+ Den ondeste suppe sesh i solsystemet
