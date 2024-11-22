@@ -7,5 +7,25 @@
             Console.WriteLine("Hello World!");
         }
     }
+
+    class Suppe
+    {
+        
+    }
+
+    class Ingrediens
+    {
+        
+    }
+
+    class Menu
+    {
+        
+    }
+
+    class Drink
+    {
+        
+    }
 }
 
