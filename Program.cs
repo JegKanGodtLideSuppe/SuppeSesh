@@ -33,7 +33,7 @@
         private int mængde;
     }
 
-    class Bullion
+    class Bouillon
     {
         private string navn;
     }
