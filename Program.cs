@@ -11,7 +11,7 @@
     class Suppe
     {
         List<Ingrediens> ingrediens = new List<Ingrediens>();
-        Bullion bullion = new Bullion();
+        Bouillon bouillon = new Bouillon();
         
     }
 
