@@ -64,6 +64,25 @@ namespace SuppeSesh
             this.ingredienser = ingredienser;
             this.bouillon = bouillon;
         }
+
+        Suppe(int dbId)
+        {
+            var data = Program.RunSqlCommand("SELECT Supper.Navn FROM Supper WHERE SuppeID = @id;",
+                new List<SqlParameter>() { new SqlParameter("@id", dbId) });
+
+            if (data.HasRows == false)
+            {
+                Console.WriteLine("Ingen suppe fundet");
+                return;
+            }
+
+
+            navn = data.GetString(0);
+            bouillon = new Bouillon(dbId);
+
+
+        }
+        
         
         void AddSoupToDb()
         {
@@ -88,6 +107,8 @@ namespace SuppeSesh
                     });
             }
         }
+        
+        
         
     }
 
@@ -186,6 +207,21 @@ namespace SuppeSesh
         Bouillon(string navn)
         {
             this.navn = navn;
+        }
+
+        internal Bouillon(int dbId)
+        {
+            var data = Program.RunSqlCommand("SELECT Bouillon.Navn FROM Bouillon WHERE BouillonID = @id;",
+                new List<SqlParameter>() { new SqlParameter("@id", dbId) });
+
+            if (data.HasRows == false)
+            {
+                Console.WriteLine("Ingen bouillon fundet");
+                return;
+            }
+
+
+            navn = data.GetString(0);
         }
 
         private void AddBouillonToDb()
