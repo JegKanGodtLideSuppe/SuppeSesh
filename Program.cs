@@ -23,7 +23,6 @@ namespace SuppeSesh
         static void Main(string[] args)
         {
             StartDB();
-            
         }
 
         static void StartDB()
