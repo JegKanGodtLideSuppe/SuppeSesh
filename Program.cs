@@ -67,7 +67,7 @@ namespace SuppeSesh
 
         Suppe(int dbId)
         {
-            var data = Program.RunSqlCommand("SELECT Supper.Navn FROM Supper WHERE SuppeID = @id;",
+            var data = Program.RunSqlCommand("SELECT Supper.Navn, Ingredienser.Navn FROM Supper\nJOIN SuppeIngredienser ON SuppeIngredienser.SuppeID = Supper.SuppeID\nJOIN Ingredienser ON Ingredienser.IngrediensID = SuppeIngredienser.IngrediensID;",
                 new List<SqlParameter>() { new SqlParameter("@id", dbId) });
 
             if (data.HasRows == false)
@@ -121,6 +121,22 @@ namespace SuppeSesh
         {
             this.navn = navn;
             this.vegansk = vegansk;
+        }
+
+        Ingrediens(int dbId)
+        {
+            var data = Program.RunSqlCommand("SELECT Ingredienser.Navn, Ingredienser.Vegansk FROM Ingredienser WHERE IngrediensID = @id;",
+                new List<SqlParameter>() { new SqlParameter("@id", dbId) });
+
+            if (data.HasRows == false)
+            {
+                Console.WriteLine("Ingen ingrediens fundet");
+                return;
+            }
+
+
+            navn = data.GetString(0);
+            vegansk = Convert.ToBoolean(data.GetInt32(1));
         }
         
         
@@ -177,12 +193,28 @@ namespace SuppeSesh
     class Drink
     {
         internal string navn;
-        private int mængde;
+        internal int mængde;
 
         Drink(string navn, int mængde)
         {
             this.navn = navn;
             this.mængde = mængde;
+        }
+
+        Drink(int dbId)
+        {
+            var data = Program.RunSqlCommand("SELECT Drinks.Navn, Drinks.Mængde FROM Drinks WHERE DrinkID = @id;",
+                new List<SqlParameter>() { new SqlParameter("@id", dbId) });
+
+            if (data.HasRows == false)
+            {
+                Console.WriteLine("Ingen drink fundet");
+                return;
+            }
+
+
+            navn = data.GetString(0);
+            mængde = data.GetInt32(1);
         }
 
         private void AddDrinkToDb()
