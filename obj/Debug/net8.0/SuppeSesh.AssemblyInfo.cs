@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuppeSesh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+559532e80245bc3c2a5d88c8ceab786a09f2c878")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af688a1821ee92f04feb3cc85e5822f6371a5615")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuppeSesh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuppeSesh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
