@@ -41,3 +41,4 @@ C:\Users\bamfh\OneDrive - Rybners\prog\Skole\SuppeSesh\obj\Debug\net8.0\refint\S
 C:\Users\bamfh\OneDrive - Rybners\prog\Skole\SuppeSesh\obj\Debug\net8.0\SuppeSesh.pdb
 C:\Users\bamfh\OneDrive - Rybners\prog\Skole\SuppeSesh\obj\Debug\net8.0\SuppeSesh.genruntimeconfig.cache
 C:\Users\bamfh\OneDrive - Rybners\prog\Skole\SuppeSesh\obj\Debug\net8.0\ref\SuppeSesh.dll
+C:\Users\bamfh\OneDrive - Rybners\prog\Skole\SuppeSesh\bin\Debug\net8.0\SuppeDB.db

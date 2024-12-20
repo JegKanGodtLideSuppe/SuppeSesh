@@ -11,4 +11,11 @@
       <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="SuppeDB.db" />
+      <Content Include="SuppeDB.db">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
