@@ -247,7 +247,7 @@ namespace SuppeSesh
             }
             
             sqlite_cmd = sqlite_conn.CreateCommand(); // Creating the SQL command
-            sqlite_cmd.CommandText = sql; // Setting SQL command text
+            sqlite_cmd.CommandText = sql; // Setting SQL command text 
             
             sqlite_cmd.Parameters.Clear(); // Clearing any previous parameters
             if (parameters == null) // If no parameters are provided
